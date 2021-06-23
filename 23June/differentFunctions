@@ -1,0 +1,112 @@
+//printing oddnumbers with IIFE
+(function () {
+    var sArray=[1,4,5,7,9];
+    for(var i=0;i<sArray.length;i++)
+    {
+       if(sArray[i]%2!==0)
+        console.log(sArray[i]);
+    }
+  })();
+
+//printing odd numbers with anonymous function
+var t=function(){
+    console.log("anonymous");
+ var sArray=[1,4,5,7,9];
+ var oArray=[];
+ for(var i=0;i<sArray.length;i++)
+ {
+    if(sArray[i]%2!==0)
+     oArray.push(sArray[i]);
+ }
+ return oArray;
+}
+var x =t();
+for(var i=0;i<x.length;i++){
+    console.log(x[i]);
+}
+
+//printing odd numbers with arrow function
+var y;
+
+y = () => {
+    var sArray=[1,4,5,7,9];
+    for(var i=0;i<sArray.length;i++)
+    {
+       if(sArray[i]%2!==0)
+        console.log(sArray[i]);
+    }
+}
+y();
+
+//sum of all nos in an array using IIFE
+(
+    function(){
+        var sArray=[1,2,3,4,5];
+        var sum =0;
+        for(var i=0;i<sArray.length;i++)
+        {
+            sum = sum+sArray[i];
+        }
+        console.log(sum);
+    }
+)();
+//sum of all nos in an array using anonymous
+var noSum=function(){
+    var sArray=[1,2,3,4,5];
+    var sum =0;
+    for(var i=0;i<sArray.length;i++)
+    {
+        sum = sum+sArray[i];
+    }
+    return sum;
+}
+var printSum=noSum();
+console.log(printSum);
+
+//sum of all nos in an array using arrow function
+
+var arrowSum;
+arrowSum = ()=>{
+    var sArray=[1,2,3,4,5];
+    var sum =0;
+    for(var i=0;i<sArray.length;i++)
+    {
+        sum = sum+sArray[i];
+    }
+    return sum;
+}
+var printarrowSum=arrowSum();
+console.log(printarrowSum);
+
+//check prime numbers in the array using arrow function
+let isPrime = () => {
+    var sArray=[1,2,3,4,7,9,11,13];
+    var primeArray =[];
+    for(let i=0;i<sArray.length;i++){
+    for(let j = 2; j < sArray[i]; j++)
+    {
+      if(sArray[i] % j !== 0)
+      
+      primeArray.push(sArray[i]);
+    }
+    
+  }
+  console.log(primeArray);
+}
+isPrime();
+
+//to check for pallindrome using arror function
+
+let isPallindrome = () =>{
+var sArray = ["121","234","12321","565"];
+var pArray=[];
+for(var i=0;i<sArray.length;i++){
+    var p = sArray[i].split("").reverse().join("");
+    if(p===sArray[i]){
+        pArray.push(sArray[i])
+    }
+}
+return pArray;
+}
+var printPall=isPallindrome();
+console.log(printPall);
